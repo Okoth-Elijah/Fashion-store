@@ -1,3 +1,9 @@
+<?php
+session_start(); // Make sure this is at the top of the file
+// var_dump($_SESSION); 
+?>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -62,7 +68,12 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                                <a href="login.php">Sign in</a>
+                                <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
+                                    <a href="login.php">Sign in</a>
+                                <?php else: ?>
+                                    <a href="logout.php">Log Out</a>
+                                <?php endif; ?>
+
                                 <a href="#">FAQs</a>
                             </div>
                             <div class="header__top__hover">

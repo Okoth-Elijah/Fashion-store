@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-        <head>
+            <head>
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <title>Login Form</title>
@@ -10,16 +10,12 @@
         <body>
         
                 <form action="includes/login-formhandler.php" method="post" class="login-form px-4 py-5 d-flex flex-column rounded justify-content-between">
-                    <img src="img/Apparel nest .png" class="img-fluid mx-auto" alt="logo">
+                    <img src="img/Apparel-nest.png" class="img-fluid mx-auto" alt="logo">
 
                     <h3 class="register-title fw-bold">Login Form</h3>
                     <div class="form-group mt-2">
-                        <label for="f_name">First Name</label>
-                        <input type="text" name="f_name" id="F_name" placeholder=" Enter First Name" class="form-control form-control-md">
-                    </div>
-                    <div class="form-group mt-2">
-                        <label for="l_name">Last Name</label>
-                        <input type="text" name="l_name" id="L_name" placeholder="Enter Last Name" class="form-control form-control-md">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter email" class="form-control form-control-md">
                     </div>
                     <div class="form-group mt-2">
                         <label for="password">Password</label>

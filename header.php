@@ -5,7 +5,7 @@ session_start(); // Make sure this is at the top of the file
 
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@ session_start(); // Make sure this is at the top of the file
     <meta name="keywords" content="Apparel Nest, unica, creative, php">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fashion</title>
+    <title>Apparel Nest</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
     rel="stylesheet">
@@ -26,6 +26,15 @@ session_start(); // Make sure this is at the top of the file
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+    <style>
+        .Apparel {
+            height: 7em;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -90,10 +99,10 @@ session_start(); // Make sure this is at the top of the file
             </div>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row d-flex align-items-center">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                        <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                     <a href="./index.php"><img class="img-fluid Apparel" src="img/Apparel-nest.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">

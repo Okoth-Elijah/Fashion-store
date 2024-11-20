@@ -28,12 +28,8 @@ unset($_SESSION['error_message']); // Clear the error message after displaying
                   <img src="img/Apparel-nest.png" class="img-fluid mx-auto" alt="logo">
                    <h3 class="register-title fw-bold">Registration Form</h3>
                 <div class="form-group mt-2">
-                    <label for="F_name">First Name</label>
-                    <input type="text" name="f_name" id="F_name" placeholder=" Enter First Name" class="form-control form-control-md">
-                </div>
-                <div class="form-group mt-2">
-                    <label for="L_name">Last Name</label>
-                    <input type="text" name="l_name" id="L_name" placeholder="Enter Last Name" class="form-control form-control-md">
+                    <label for="Username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="username" class="form-control form-control-md">
                 </div>
                 <div class="form-group mt-2">
                     <label for="Phone">Phone Number</label>

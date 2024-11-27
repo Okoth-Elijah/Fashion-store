@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=myfirstdatabase";
+$dsn = "mysql:host=localhost;dbname=apparel_nest";
 $dbusername = "root";
 $dbpassword = "";
 
@@ -9,4 +9,4 @@ try {
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
   echo "Connection failed " . $e->getMessage();
-}
+};

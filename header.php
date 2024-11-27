@@ -1,8 +1,17 @@
 <?php
-session_start(); // Make sure this is at the top of the file
-// var_dump($_SESSION); 
-?>
+// Start the session at the very beginning, before any HTML output
+session_start();
 
+// Check if the user is logged in
+if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
+    // Redirect to the login page if not logged in
+    header("Location: login.php");
+    exit();
+}
+
+// Display home page content for logged-in users
+echo "Welcome, " . $_SESSION["username"] . "! You are logged in.";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +24,7 @@ session_start(); // Make sure this is at the top of the file
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Apparel Nest</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
-    rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
@@ -26,7 +33,6 @@ session_start(); // Make sure this is at the top of the file
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
 
     <style>
         .Apparel {
@@ -72,7 +78,7 @@ session_start(); // Make sure this is at the top of the file
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-7">
-                       
+                        <!-- Empty Section -->
                     </div>
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
@@ -82,7 +88,6 @@ session_start(); // Make sure this is at the top of the file
                                 <?php else: ?>
                                     <a href="logout.php">Log Out</a>
                                 <?php endif; ?>
-
                                 <a href="#">FAQs</a>
                             </div>
                             <div class="header__top__hover">
@@ -102,13 +107,13 @@ session_start(); // Make sure this is at the top of the file
             <div class="row d-flex align-items-center">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                     <a href="./index.php"><img class="img-fluid Apparel" src="img/Apparel-nest.png" alt=""></a>
+                        <a href="./index.php"><img class="img-fluid Apparel" src="img/Apparel-nest.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.php">Home</a></li>
+                            <li><a href="./index.php">Home</a></li>
                             <li><a href="./shop.php">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
@@ -136,3 +141,5 @@ session_start(); // Make sure this is at the top of the file
             <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
     </header>
+</body>
+</html>

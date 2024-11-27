@@ -1,11 +1,12 @@
 <?php
-session_start(); // Start session at the very top
-
-
-// Start session and destroy the session
+// Start the session at the very top
 session_start();
+
+// Destroy all session variables to log the user out
 session_unset();
 session_destroy();
-header("Location: index.php"); // Redirect to homepage after logging out
-exit();
 
+// Redirect to the login page after logging out
+header("Location: login.php");
+exit();
+?>

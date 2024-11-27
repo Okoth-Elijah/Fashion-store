@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Hash the password for secure storage
     $hashed_pwd = password_hash($pwd, PASSWORD_DEFAULT);
-
+    
     try {
         require_once "dbh.inc.php";
 
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt = null;
 
         // Redirect to login page after successful registration
-        header("Location: ../index.php");
+        header("Location: ../login.php");
         die();
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
